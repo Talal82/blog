@@ -1,0 +1,1 @@
+<p class="text-center">Copyright Talal Anwar - All Rights Reserved.</p>
