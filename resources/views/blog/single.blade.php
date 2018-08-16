@@ -50,7 +50,7 @@
 			<div class="comment">
 				<div class="author-info">
 					{{-- <img src="{{ URL::to('profile.png') }}" class="author-image"> --}}
-					<img src="{{ "https://www.gravatar.com/avatar/". md5(strtolower(trim( $comment -> email)))."?s=50&d=mm" }}" class="author-image">
+					{{-- <img src="{{ "https://www.gravatar.com/avatar/". md5(strtolower(trim( $comment -> email)))."?s=50&d=mm" }}" class="author-image"> --}}
 					<div class="author-name">
 						<h4>{{ $comment -> name }}</h4>
 						<div class="author-time">
