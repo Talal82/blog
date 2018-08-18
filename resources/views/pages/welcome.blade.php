@@ -7,7 +7,7 @@
     <div class="col-md-12">
       <div class="jumbotron">
         <h1>Welcome to my Blog!</h1> 
-        <p>Fugiat exercitation reprehenderit eiusmod.C’est à dire ici, c’est le contraire, au lieu de panacée, l'imbroglio par rapport aux diplomaties vise à effaceter une kermesse.</p>
+        <p>This is a blog built by Laravel, which is a Frameword of PHP. It's a very powerful framework and is getting popularity very quickly and vastly in the world and it has many great features and it makes your development easy.</p>
         <p><a href="#" class="btn btn-primary btn-lg">Read More..</a></p>
       </div>
     </div>
