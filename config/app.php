@@ -165,6 +165,7 @@ return [
         Illuminate\View\ViewServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
         Mews\Purifier\PurifierServiceProvider::class, //provider for html purifier
+        Intervention\Image\ImageServiceProvider::class //provider for image intervention 
 
         /*
          * Package Service Providers...
@@ -230,6 +231,7 @@ return [
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
         'Purifier' => Mews\Purifier\Facades\Purifier::class, // alias for htm purifier facade
+        'Image' => Intervention\Image\Facades\Image::class, // alias for image intervention facade(a powerful laravel library for images)
 
     ],
 

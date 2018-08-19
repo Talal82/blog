@@ -21,17 +21,17 @@
 		<div class="col-md-8 offset-2">
 			<h1>Create New Post</h1>
 			<hr>
-			{!! Form::open(['route' => 'posts.store', 'data-parsley-validate' => '']) !!}
+			{!! Form::open(['route' => 'posts.store', 'data-parsley-validate' => '', 'files' => true]) !!}
 				{{ csrf_field() }}
 
 			    {{ Form::label('title', 'Title:')}}
 			    {{ Form::text('title', null, array('class' => 'form-control', 'required' => '', 'maxlength' => '191' ))}}
 
-			    {{ Form::label('slug', "Slug:") }}
+			    {{ Form::label('slug', "Slug:", ['class' => 'btn-h1-spacing']) }}
 			    {{ Form::text('slug', null, ['class' => 'form-control', 'required' => '', 'minlength' =>
 			    '5', 'maxlength' => '191']) }}
 
-			    {{ Form::label('category_id', 'Category:') }}
+			    {{ Form::label('category_id', 'Category:', ['class' => 'btn-h1-spacing']) }}
 			    <select class="form-control form-control-lg" name="category_id">
 					@foreach($categories as $category)
 					
@@ -40,7 +40,7 @@
 					@endforeach
 			    </select>
 
-			    {{ Form::label('tag_id', 'Tags:') }}
+			    {{ Form::label('tag_id', 'Tags:', ['class' => 'btn-h1-spacing']) }}
 			    <select class="form-control form-control-lg select2-multi" name="tags[]" multiple="multiple">
 					@foreach($tags as $tag)
 					
@@ -49,7 +49,10 @@
 					@endforeach
 			    </select>
 
-			    {{ Form::label('body', 'Post Body:')}}
+			    {{ Form::label('featured_image', 'Upload Featured Image', ['class' => 'btn-h1-spacing']) }}
+				{{ Form::file('featured_image') }}
+
+			    {{ Form::label('body', 'Post Body:', ['class' => 'btn-h1-spacing'])}}
 			    {{ Form::textarea('body', null, array('class' => 'form-control', 'required' => '' ))}}
 
 			    {{ Form::submit('Create Post', array('class' => 'btn btn-success btn-lg btn-block', 'style' => 'margin-top:20px;')) }}

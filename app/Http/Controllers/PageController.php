@@ -14,7 +14,9 @@ class PageController extends Controller
     	$posts = Post::orderBy('created_at', 'desc')->paginate(5);
         // $posts = Post::orderBy('created_at', 'desc')->paginate(2);
         // $posts = Post::paginate(4);
-    	return view('pages.welcome')->withPosts($posts);
+        $paginator = Post::Paginate();
+        // dd($paginator);
+    	return view('pages.welcome')->withPosts($posts)->withPaginator($paginator);
     }
 
     public function getAbout() {
@@ -49,7 +51,7 @@ class PageController extends Controller
             $message -> to('talalanwer2424@gmail.com');
             $message -> subject($data['subject']);
         });
-        Session::flash('success', 'You contact is successfully submitted!');
+        Session::flash('success', 'Your contact is successfully submitted!');
 
         return redirect()->route('main');
     }
